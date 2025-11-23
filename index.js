@@ -6,8 +6,10 @@ let isAlive = true
 // 1. Declare a variable called message and assign its value to an empty string
 let message = ""
 let messageEl =document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
 function start(){
     // 2. Reassign the message variable to the string we're logging out
+    sumEl.textContent = sum
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂"
     } else if (sum === 21) {
