@@ -1,9 +1,8 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 // 1. Declare a variable called message and assign its value to an empty string
 let message = ""
 let messageEl =document.getElementById("message-el")
@@ -29,6 +28,11 @@ function getRandomCard(){
 
 // Create a new function called startGame() that calls renderGame()
 function startGame(){
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    isAlive = true
     renderGame()
 }
 
