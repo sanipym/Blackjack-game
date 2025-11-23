@@ -13,7 +13,18 @@ let cardsEl = document.querySelector("#cards-el")
 // 1. Create a function, getRandomCard(), that always returns the number 5
 
 function getRandomCard(){
-    return 5
+    //return 5
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    let rendomNumber = Math.floor(Math.random() * 13) + 1
+    console.log(rendomNumber)
+    if (rendomNumber == 1){
+        return 11
+    }else if(rendomNumber > 10){
+        return 10
+    }else{
+        return rendomNumber
+    }    
 }
 
 // Create a new function called startGame() that calls renderGame()
