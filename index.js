@@ -8,7 +8,13 @@ let message = ""
 let messageEl =document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
-function start(){
+
+// Create a new function called startGame() that calls renderGame()
+function startGame(){
+    renderGame()
+}
+
+function renderGame(){
     // 2. Reassign the message variable to the string we're logging out
     //Render the cars on the page using this format -> "Cards: 10 4"
     cardsEl.textContent =  "Cards: "+ firstCard + " " + secondCard
@@ -37,5 +43,5 @@ function newCard(){
     sum += card
     
     // 3. Call startGame()
-    start()
+    renderGame()
 }
