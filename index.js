@@ -18,7 +18,12 @@ function startGame(){
 function renderGame(){
     // 2. Reassign the message variable to the string we're logging out
     //Render the cars on the page using this format -> "Cards: 10 4"
-    cardsEl.textContent =  "Cards: "+ cards[0] + " " + cards[1]
+    //cardsEl.textContent =  "Cards: "+ cards[0] + " " + cards[1]
+    cardsEl.textContent = "Cards: "
+    for(let i=0; i < cards.length; i++){
+        cardsEl.textContent += cards[i] + " "
+
+    }
     sumEl.textContent = sum
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂"
@@ -42,6 +47,7 @@ function newCard(){
      
     // 2. Add the new card to the sum variable
     sum += card
+    cards.push(card)
     
     // 3. Call startGame()
     renderGame()
