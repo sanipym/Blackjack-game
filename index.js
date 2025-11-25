@@ -64,12 +64,11 @@ function renderGame(){
 function newCard(){
     console.log("Drawing a new card from the deck!")
     // 1. Create a card variable, and hard code its value to a number (2-11)
-    let card = getRandomCard()
-     
-    // 2. Add the new card to the sum variable
-    sum += card
-    cards.push(card)
-    
-    // 3. Call startGame()
-    renderGame()
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()        
+    }
+   
 }
